@@ -204,7 +204,7 @@ func (a Address) Appends(other ...string) *Address {
 }
 
 // Slice returns a new address that is a sub list of this address. A 'to'-value of -1 means till the end.
-/// No data is copied, the result is not compact.
+// No data is copied, the result is not compact.
 func (a Address) Slice(from, to int) *Address {
 	if from < 0 || from > a.len {
 		log.Panicf("from %d out of range", from)
@@ -307,10 +307,6 @@ func NewAddressFromData(s string) *Address {
 
 // This operation compacts both addresses..
 func (a *Address) Compare(other *Address) int {
-	minl := a.len
-	if other.len < minl {
-		minl = other.len
-	}
 	// TODO optimize using iter
 	return strings.Compare(a.Compact().String(), other.Compact().String())
 }

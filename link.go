@@ -51,7 +51,7 @@ func (lr *Link) sendSafely(lf *pb.LinkFrame) (err error) {
 	return
 }
 
-// ReceiveAndDispatch uses and blocks the calling goroutine to receive and dispatch messages comming in over the link transport.
+// ReceiveAndDispatch uses and blocks the calling goroutine to receive and dispatch messages coming in over the link transport.
 // The link is only established while this function is running. An error is returned when the link has failed.
 func (lr *Link) ReceiveAndDispatch() (err error) {
 tryAnotherId:
@@ -143,7 +143,7 @@ func (lc *LinkClient) Close() {
 }
 
 // Run uses and blocks the calling goroutine to establish the link and to receive and dispatch incomming messages to the core.
-// Until Close is called, it will continously block retry with a delay to establish the connection.
+// Until Close is called, it will continuously block retry with a delay to establish the connection.
 func (lc *LinkClient) Run() {
 	client := pb.NewLinkServiceClient(lc.conn)
 	lc.log.Printf("opening")

@@ -4,7 +4,6 @@ import (
 	"crypto/x509"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net"
 	"os"
 
@@ -12,6 +11,7 @@ import (
 	"github.com/blachris/arpcnet/rpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+	"google.golang.org/grpc/credentials/insecure"
 	"gopkg.in/yaml.v2"
 )
 
@@ -132,7 +132,7 @@ func (cfg *Config) apply(n *Node) error {
 	}
 	certPool := x509.NewCertPool()
 	for _, certFile := range cfg.ServerCertificates {
-		certFileData, err := ioutil.ReadFile(certFile)
+		certFileData, err := os.ReadFile(certFile)
 		if err != nil {
 			return fmt.Errorf("failed loading Server Certificate %s: %v", certFile, err)
 		}
@@ -145,7 +145,7 @@ func (cfg *Config) apply(n *Node) error {
 		var conn *grpc.ClientConn
 		var err error
 		if lccfg.Insecure {
-			conn, err = grpc.Dial(lccfg.Target, grpc.WithInsecure())
+			conn, err = grpc.Dial(lccfg.Target, grpc.WithTransportCredentials(insecure.NewCredentials()))
 		} else {
 			conn, err = grpc.Dial(lccfg.Target, grpc.WithTransportCredentials(credentials.NewClientTLSFromCert(certPool, "")))
 		}
