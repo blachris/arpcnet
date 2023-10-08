@@ -14,8 +14,8 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	pb "github.com/rektorphi/arpcnet/generated/rektorphi/arpcnet/test"
-	"github.com/rektorphi/arpcnet/lru"
+	pb "github.com/blachris/arpcnet/generated/blachris/arpcnet/test"
+	"github.com/blachris/arpcnet/lru"
 )
 
 type testServiceImpl struct {

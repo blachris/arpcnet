@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	v1 "github.com/rektorphi/arpcnet/generated/rektorphi/arpcnet/v1"
+	v1 "github.com/blachris/arpcnet/generated/blachris/arpcnet/v1"
 	"google.golang.org/grpc/codes"
 )
 

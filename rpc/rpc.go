@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/rektorphi/arpcnet/util"
+	"github.com/blachris/arpcnet/util"
 	"google.golang.org/genproto/googleapis/rpc/code"
 )
 

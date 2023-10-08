@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/rektorphi/arpcnet/util"
+	"github.com/blachris/arpcnet/util"
 )
 
 // Verbosity levels in logging.

@@ -13,9 +13,9 @@ import (
 	"github.com/montanaflynn/stats"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/rektorphi/arpcnet"
-	pb "github.com/rektorphi/arpcnet/generated/rektorphi/arpcnet/test"
-	"github.com/rektorphi/arpcnet/testservice"
+	"github.com/blachris/arpcnet"
+	pb "github.com/blachris/arpcnet/generated/blachris/arpcnet/test"
+	"github.com/blachris/arpcnet/testservice"
 )
 
 func main() {

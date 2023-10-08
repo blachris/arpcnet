@@ -30,7 +30,7 @@ func NewLinkServiceClient(cc grpc.ClientConnInterface) LinkServiceClient {
 }
 
 func (c *linkServiceClient) Link(ctx context.Context, opts ...grpc.CallOption) (LinkService_LinkClient, error) {
-	stream, err := c.cc.NewStream(ctx, &LinkService_ServiceDesc.Streams[0], "/rektorphi.arpcnet.v1.LinkService/Link", opts...)
+	stream, err := c.cc.NewStream(ctx, &LinkService_ServiceDesc.Streams[0], "/blachris.arpcnet.v1.LinkService/Link", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -118,7 +118,7 @@ func (x *linkServiceLinkServer) Recv() (*LinkFrame, error) {
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var LinkService_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "rektorphi.arpcnet.v1.LinkService",
+	ServiceName: "blachris.arpcnet.v1.LinkService",
 	HandlerType: (*LinkServiceServer)(nil),
 	Methods:     []grpc.MethodDesc{},
 	Streams: []grpc.StreamDesc{
@@ -129,5 +129,5 @@ var LinkService_ServiceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "rektorphi/arpcnet/v1/link_service.proto",
+	Metadata: "blachris/arpcnet/v1/link_service.proto",
 }

@@ -7,8 +7,8 @@ import (
 	"sync"
 	"time"
 
-	pb "github.com/rektorphi/arpcnet/generated/rektorphi/arpcnet/v1"
-	"github.com/rektorphi/arpcnet/util"
+	pb "github.com/blachris/arpcnet/generated/blachris/arpcnet/v1"
+	"github.com/blachris/arpcnet/util"
 )
 
 const maxQueryTimeout time.Duration = 5000 * time.Millisecond

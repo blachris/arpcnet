@@ -1,11 +1,11 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-package rektorphi.arpcnet.v1;
-option java_package = "com.github.rektorphi.arpcnet.v1";
-option go_package = "github.com/rektorphi/arpcnet/v1";
+package blachris.arpcnet.v1;
+option java_package = "com.github.blachris.arpcnet.v1";
+option go_package = "github.com/blachris/arpcnet/v1";
 
-import "rektorphi/arpcnet/v1/rpcframe.proto";
+import "blachris/arpcnet/v1/rpcframe.proto";
 
 service LinkService {
     rpc Link(stream LinkFrame) returns (stream LinkFrame);

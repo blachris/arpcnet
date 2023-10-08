@@ -1,0 +1,4 @@
+linkClients:
+- target: blacker.cloud:443
+serverCertificates:
+- isrgrootx1.pem

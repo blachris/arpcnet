@@ -10,8 +10,8 @@ import (
 	"code.cloudfoundry.org/bytefmt"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/rektorphi/arpcnet/generated/rektorphi/arpcnet/test"
-	"github.com/rektorphi/arpcnet/testservice"
+	"github.com/blachris/arpcnet/generated/blachris/arpcnet/test"
+	"github.com/blachris/arpcnet/testservice"
 )
 
 type Setup struct {
@@ -36,7 +36,7 @@ func NewSetup(coreMemory int) *Setup {
 		CoreMemory: bytefmt.ByteSize(uint64(coreMemory)),
 		Group:      "test:group",
 		GRPCMappings: []GRPCMapping{
-			{Target: "localhost:40123", Mount: "", Methods: []string{"rektorphi.arpcnet.test"}},
+			{Target: "localhost:40123", Mount: "", Methods: []string{"blachris.arpcnet.test"}},
 		},
 	})
 	if err != nil {

@@ -9,7 +9,7 @@ import (
 	"os"
 
 	"code.cloudfoundry.org/bytefmt"
-	"github.com/rektorphi/arpcnet/rpc"
+	"github.com/blachris/arpcnet/rpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"gopkg.in/yaml.v2"

@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"time"
 
-	pb "github.com/rektorphi/arpcnet/generated/rektorphi/arpcnet/v1"
+	pb "github.com/blachris/arpcnet/generated/blachris/arpcnet/v1"
 )
 
 // Chunk is a payload fragment. Large payloads can be split across multiple chunks.

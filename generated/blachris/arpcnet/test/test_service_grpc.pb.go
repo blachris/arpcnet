@@ -33,7 +33,7 @@ func NewTestClient(cc grpc.ClientConnInterface) TestClient {
 
 func (c *testClient) UnaryCall(ctx context.Context, in *TestMessage, opts ...grpc.CallOption) (*TestMessage, error) {
 	out := new(TestMessage)
-	err := c.cc.Invoke(ctx, "/rektorphi.arpcnet.test.Test/UnaryCall", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/blachris.arpcnet.test.Test/UnaryCall", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -41,7 +41,7 @@ func (c *testClient) UnaryCall(ctx context.Context, in *TestMessage, opts ...grp
 }
 
 func (c *testClient) ServerStream(ctx context.Context, in *TestMessage, opts ...grpc.CallOption) (Test_ServerStreamClient, error) {
-	stream, err := c.cc.NewStream(ctx, &Test_ServiceDesc.Streams[0], "/rektorphi.arpcnet.test.Test/ServerStream", opts...)
+	stream, err := c.cc.NewStream(ctx, &Test_ServiceDesc.Streams[0], "/blachris.arpcnet.test.Test/ServerStream", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -73,7 +73,7 @@ func (x *testServerStreamClient) Recv() (*TestMessage, error) {
 }
 
 func (c *testClient) BidiStream(ctx context.Context, opts ...grpc.CallOption) (Test_BidiStreamClient, error) {
-	stream, err := c.cc.NewStream(ctx, &Test_ServiceDesc.Streams[1], "/rektorphi.arpcnet.test.Test/BidiStream", opts...)
+	stream, err := c.cc.NewStream(ctx, &Test_ServiceDesc.Streams[1], "/blachris.arpcnet.test.Test/BidiStream", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -149,7 +149,7 @@ func _Test_UnaryCall_Handler(srv interface{}, ctx context.Context, dec func(inte
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/rektorphi.arpcnet.test.Test/UnaryCall",
+		FullMethod: "/blachris.arpcnet.test.Test/UnaryCall",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(TestServer).UnaryCall(ctx, req.(*TestMessage))
@@ -208,7 +208,7 @@ func (x *testBidiStreamServer) Recv() (*TestMessage, error) {
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Test_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "rektorphi.arpcnet.test.Test",
+	ServiceName: "blachris.arpcnet.test.Test",
 	HandlerType: (*TestServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -229,5 +229,5 @@ var Test_ServiceDesc = grpc.ServiceDesc{
 			ClientStreams: true,
 		},
 	},
-	Metadata: "rektorphi/arpcnet/test/test_service.proto",
+	Metadata: "blachris/arpcnet/test/test_service.proto",
 }

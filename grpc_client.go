@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/rektorphi/arpcnet/rpc"
+	"github.com/blachris/arpcnet/rpc"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 )

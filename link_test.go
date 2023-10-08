@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/rektorphi/arpcnet/rpc"
+	"github.com/blachris/arpcnet/rpc"
 	"google.golang.org/grpc"
 )
 

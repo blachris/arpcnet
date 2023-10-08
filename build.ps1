@@ -18,9 +18,9 @@ finally {
 }
 Move-Item -Force ./arpcnet ./docker
 if ($validVersion) {
-    docker build ./docker -t rektorphi/arpcnet:latest
-    docker tag rektorphi/arpcnet:latest rektorphi/arpcnet:$version
+    docker build ./docker -t blachris/arpcnet:latest
+    docker tag blachris/arpcnet:latest blachris/arpcnet:$version
 } else {
-    docker build ./docker -t rektorphi/arpcnet:dev
+    docker build ./docker -t blachris/arpcnet:dev
 }
 Remove-Item ./docker/arpcnet

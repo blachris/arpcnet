@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package rektorphi.arpcnet.test;
-option java_package = "com.github.rektorphi.arpcnet.test";
-option go_package = "github.com/rektorphi/arpcnet/test";
+package blachris.arpcnet.test;
+option java_package = "com.github.blachris.arpcnet.test";
+option go_package = "github.com/blachris/arpcnet/test";
 
 message TestMessage {
     string text = 1;

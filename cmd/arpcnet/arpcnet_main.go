@@ -11,8 +11,8 @@ import (
 
 	//_ "net/http/pprof"
 
-	"github.com/rektorphi/arpcnet"
-	"github.com/rektorphi/arpcnet/rpc"
+	"github.com/blachris/arpcnet"
+	"github.com/blachris/arpcnet/rpc"
 )
 
 type stringsFlag []string

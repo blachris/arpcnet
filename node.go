@@ -2,7 +2,7 @@ package arpcnet
 
 import (
 	"code.cloudfoundry.org/bytefmt"
-	"github.com/rektorphi/arpcnet/rpc"
+	"github.com/blachris/arpcnet/rpc"
 )
 
 // A Node is the runtime data structure for a node in the Arpc network.

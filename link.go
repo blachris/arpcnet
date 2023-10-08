@@ -10,9 +10,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	pb "github.com/rektorphi/arpcnet/generated/rektorphi/arpcnet/v1"
-	"github.com/rektorphi/arpcnet/rpc"
-	"github.com/rektorphi/arpcnet/util"
+	pb "github.com/blachris/arpcnet/generated/blachris/arpcnet/v1"
+	"github.com/blachris/arpcnet/rpc"
+	"github.com/blachris/arpcnet/util"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/peer"
